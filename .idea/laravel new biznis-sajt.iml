@@ -117,6 +117,7 @@
       <excludeFolder url="file://$MODULE_DIR$/biznis-sajt/vendor/voku/portable-ascii" />
       <excludeFolder url="file://$MODULE_DIR$/biznis-sajt/storage/app" />
       <excludeFolder url="file://$MODULE_DIR$/biznis-sajt/storage/framework" />
+      <excludeFolder url="file://$MODULE_DIR$/biznis-sajt/vendor/laravel/breeze" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
