@@ -15,7 +15,12 @@
                 <div class="hero-buttons">
                     <a href="#contact" class="btn btn-primary">Request a Quote</a>
                     <a href="/cv/tamara-cv.pdf" class="btn btn-secondary" download>Download CV</a>
+
                 </div>
+
+                <a href="/alex" class="btn btn-outline-dark" style="margin-left:10px;">
+                    if you wish  Meet my collaborator Alex
+                </a>
 
                 <div class="hero-stats">
                     <div class="stat-box">
