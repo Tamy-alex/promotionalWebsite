@@ -9,7 +9,7 @@
                 <span class="hero-badge">Backend Developer • PHP & Laravel • Cybersecurity</span>
                 <h1>Secure, scalable web applications — built with precision.</h1>
                 <p>
-                    I'm Aleksandra (Alex) Cvetic — a Backend Developer specialising in PHP 8, Laravel 12,
+                    I'm Aleksandra (Alex) — a Backend Developer specialising in PHP 8, Laravel 12,
                     MySQL and MongoDB. With a strong background in cybersecurity, I build not just fast
                     and clean applications, but secure ones too.
                 </p>
@@ -40,7 +40,7 @@
             <div class="hero-card">
                 <div class="hero-logo-box">
                     <div class="hero-logo-circle">AC</div>
-                    <h3>Alex Dev</h3>
+                    <h3>Phoenix Web Crafts</h3>
                     <p>Backend Developer • Web & Security</p>
                 </div>
             </div>
@@ -51,7 +51,6 @@
     <section id="about" class="section gray-section">
         <div class="container">
             <div class="section-heading">
-                <span class="section-label">About Me</span>
                 <h2>Backend developer with a security mindset</h2>
                 <p>Currently working as a Backend Developer at <strong>Nikolic Technology</strong> (March 2025 – Ongoing), building an educational platform with PHP 8+, Laravel 12, MySQL, MongoDB and AWS.</p>
             </div>
@@ -85,7 +84,6 @@
     <section id="skills" class="section">
         <div class="container">
             <div class="section-heading">
-                <span class="section-label">Tech Stack</span>
                 <h2>Technologies I work with</h2>
                 <p>A broad skillset covering backend, cloud, security and infrastructure.</p>
             </div>
@@ -181,11 +179,18 @@
                         <h3>{{ $repo['name'] }}</h3>
                         <p>{{ $repo['description'] }}</p>
 
-                        {{-- Screenshot placeholder --}}
-                        <div style="border: 2px dashed #ddd; border-radius: 8px; padding: 24px 12px; text-align:center; margin: 14px 0 10px; background:#fafafa;">
-                            <i class="fa-solid fa-image" style="font-size:1.6rem; color:#ccc;"></i>
-                            <p style="color:#bbb; font-size:0.8rem; margin: 6px 0 0;">Screenshot placeholder<br><small>Replace with <code>&lt;img src="..."&gt;</code></small></p>
-                        </div>
+                        {{-- Screenshot --}}
+                        @if(!empty($repo['image']))
+                            <div class="repo-image-wrapper">
+                                <img src="{{ asset($repo['image']) }}" alt="{{ $repo['name'] }} screenshot">
+                            </div>
+                        @else
+
+                            <div style="border: 2px dashed #ddd; border-radius: 8px; padding: 24px 12px; text-align:center; margin: 14px 0 10px; background:#fafafa;">
+                                <i class="fa-solid fa-image" style="font-size:1.6rem; color:#ccc;"></i>
+                                <p style="color:#bbb; font-size:0.8rem; margin: 6px 0 0;">Screenshot placeholder<br><small>Replace with <code>&lt;img src="..."&gt;</code></small></p>
+                            </div>
+                        @endif
 
                         <a href="{{ $repo['url'] }}" class="btn btn-primary" target="_blank" style="display:inline-flex; align-items:center; gap:8px; margin-top:6px;">
                             <i class="fa-brands fa-github"></i> View Repository
@@ -225,5 +230,27 @@
             </div>
         </div>
     </section>
+
+
+    <div id="imageOverlay" style="display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; background:rgba(0,0,0,0.8); z-index:9999; justify-content:center; align-items:center;">
+        <img id="overlayImg" src="" style="max-width:80vw; max-height:80vh; border-radius:12px;">
+    </div>
+
+    <script>
+        const overlay = document.getElementById('imageOverlay');
+        const overlayImg = document.getElementById('overlayImg');
+
+        document.querySelectorAll('.repo-image-wrapper img').forEach(img => {
+            img.addEventListener('mouseenter', function () {
+                overlayImg.src = this.src;
+                overlay.style.display = 'flex';
+            });
+        });
+
+        overlay.addEventListener('mouseleave', function () {
+            overlay.style.display = 'none';
+            overlayImg.src = '';
+        });
+    </script>
 
 @endsection
