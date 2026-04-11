@@ -1,5 +1,5 @@
 @extends('layouts.alex')
-
+@include('partials.consultation-modal')
 @section('content')
 
     {{-- ===================== HERO ===================== --}}
