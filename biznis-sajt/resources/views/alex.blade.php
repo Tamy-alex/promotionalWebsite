@@ -147,17 +147,7 @@
                     version control. The system uses both MySQL and MongoDB for flexible data management.
                 </p>
 
-                {{-- Screenshot placeholder --}}
-                <div style="border: 2px dashed #ccc; border-radius: 10px; padding: 40px 20px; text-align:center; margin-top:20px; background:#f9f9f9;">
-                    <i class="fa-solid fa-image" style="font-size:2.5rem; color:#bbb;"></i>
-                    <p style="color:#aaa; margin-top:10px;">📸 Drop your project screenshot here<br><small>Replace this block with an <code>&lt;img&gt;</code> tag pointing to your screenshot</small></p>
-                </div>
 
-                {{-- Recording placeholder --}}
-                <div style="border: 2px dashed #ccc; border-radius: 10px; padding: 40px 20px; text-align:center; margin-top:16px; background:#f9f9f9;">
-                    <i class="fa-solid fa-circle-play" style="font-size:2.5rem; color:#bbb;"></i>
-                    <p style="color:#aaa; margin-top:10px;">🎬 Drop your screen recording here<br><small>Replace this block with a <code>&lt;video&gt;</code> or <code>&lt;iframe&gt;</code> tag</small></p>
-                </div>
             </div>
         </div>
     </section>
@@ -168,7 +158,7 @@
             <div class="section-heading">
                 <span class="section-label">Portfolio</span>
                 <h2>Public GitHub Repositories</h2>
-                <p>All of my public work — from AI systems and Redis caching to full CRUD apps and security practice.</p>
+                <p>All of my public work.</p>
             </div>
 
             <div class="cards">
@@ -233,7 +223,7 @@
 
 
     <div id="imageOverlay" style="display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; background:rgba(0,0,0,0.8); z-index:9999; justify-content:center; align-items:center;">
-        <img id="overlayImg" src="" style="max-width:80vw; max-height:80vh; border-radius:12px;">
+        <img id="overlayImg" src="" style="max-width:60vw; max-height:60vh; border-radius:12px;">
     </div>
 
     <script>

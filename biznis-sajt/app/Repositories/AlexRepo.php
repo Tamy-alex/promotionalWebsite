@@ -10,11 +10,12 @@ class AlexRepo
 
 
                 [
-                    'name' => 'CORSI – Course Platform',
+                    'name' => 'CORSI – Workshop Management System',
                     'tag' => 'Laravel • Vue',
                     'icon' => 'fa-solid fa-graduation-cap',
-                    'description' => 'An educational platform built on the Laravel framework with a Vue.js frontend. Structured for scalable course management and content delivery.',
+                    'description' => 'A workshop management platform featuring an admin panel for creating and managing workshops, tracking available seats, and enabling workers to sign up based on capacity. Built with Laravel and Vue.js for a smooth, modern workflow.',
                     'url' => 'https://github.com/anxietyPotato/CORSI',
+                    'image' => 'images/img.png'
                 ],
                 [
                     'name' => 'Redis25',
@@ -36,10 +37,11 @@ class AlexRepo
                     'icon' => 'fa-solid fa-cart-shopping',
                     'description' => 'Full CRUD application with product management, database migrations, Eloquent models and form validation built in Laravel.',
                     'url' => 'https://github.com/anxietyPotato/cruds',
+                    'image' => 'images/img_1.png'
                 ],
                 [
                     'name' => 'CRUD Edit Extension',
-                    'tag' => 'PHP • JavaScript',
+                    'tag' => 'PHP ',
                     'icon' => 'fa-solid fa-pen-to-square',
                     'description' => 'An extended CRUD application adding advanced edit functionality,and improved form handling.',
                     'url' => 'https://github.com/anxietyPotato/Cruds-edit',
