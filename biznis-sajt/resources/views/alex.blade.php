@@ -18,7 +18,7 @@
                     <a href="https://github.com/anxietyPotato" class="btn btn-primary" target="_blank">
                         <i class="fa-brands fa-github"></i> View My GitHub
                     </a>
-                    <a href="#" onclick="openConsultationModal(); return false;" class="btn btn-secondary">Get in Touch</a>
+                    <a href="#" onclick="openCModal(); return false;" class="btn btn-secondary">Get in Touch</a>
                 </div>
 
                 <div class="hero-stats">

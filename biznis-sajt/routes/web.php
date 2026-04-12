@@ -5,6 +5,7 @@ use App\Http\Controllers\HomepageController;
 USE App\Http\Controllers\AlexController;
 use App\Http\Controllers\ConsultationController;
 
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -34,5 +35,9 @@ Route::get('/alex', [AlexController::class, 'index'])->name('alex');
 
 
 
+
+
+
 Route::get('/consultation/slots', [ConsultationController::class, 'slots'])->name('consultation.slots');
-Route::post('/consultation/book', [ConsultationController::class, 'store'])->name('consultation.book');
+Route::post('/consultation/book',  [ConsultationController::class, 'book'])->name('consultation.book');
+
