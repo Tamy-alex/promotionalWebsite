@@ -16,7 +16,7 @@
         <a href="{{ route('alex') }}" class="alex-brand">
             <div class="alex-logo-circle-sm">AC</div>
             <div class="alex-brand-text">
-                <span class="alex-brand-title">Aleksandra Čvetić</span>
+                <span class="alex-brand-title">Aleksandra Zecevic</span>
                 <span class="alex-brand-subtitle">Backend Developer</span>
             </div>
         </a>
@@ -28,7 +28,7 @@
             <a href="{{ route('alex') }}#projects">Projects</a>
             <a href="{{ route('alex') }}#contact">Contact</a>
             <a href="{{ route('home') }}" class="alex-nav-collab">
-                <i class="fa-solid fa-arrow-left"></i> Tamy's Page
+                <i class="fa-solid fa-arrow-left"></i> Tamara's Page
             </a>
         </nav>
 
@@ -40,7 +40,7 @@
 <footer class="alex-footer">
     <div class="alex-container alex-footer-flex">
         <div>
-            <p class="alex-footer-brand">Aleksandra (Alex) Čvetić</p>
+            <p class="alex-footer-brand">Aleksandra (Alex) Zecevic</p>
             <p class="alex-footer-text">Backend Developer · PHP & Laravel · Cybersecurity</p>
         </div>
         <div class="alex-footer-links">
@@ -49,12 +49,12 @@
             </a>
             <a href="{{ route('alex') }}#contact">Contact</a>
             <a href="{{ route('home') }}">
-                <i class="fa-solid fa-arrow-left"></i> Back to Tamy
+                <i class="fa-solid fa-arrow-left"></i> Back to Tamara's
             </a>
         </div>
     </div>
     <div class="alex-container alex-footer-bottom">
-        <p>© 2026 Aleksandra Cvetić. All rights reserved.</p>
+        <p>© 2026 Aleksandra Zecevic. All rights reserved.</p>
     </div>
 </footer>
 

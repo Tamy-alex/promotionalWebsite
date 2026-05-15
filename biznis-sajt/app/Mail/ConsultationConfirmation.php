@@ -2,6 +2,7 @@
 
 namespace App\Mail;
 
+use Carbon\Carbon;
 use Illuminate\Bus\Queueable;
 use Illuminate\Mail\Mailable;
 use Illuminate\Mail\Mailables\Content;
@@ -20,7 +21,8 @@ class ConsultationConfirmation extends Mailable
     public function envelope(): Envelope
     {
         return new Envelope(
-            subject: 'Your consultation is confirmed — ' . $this->booking['preferred_date'],
+            subject: '✅ Your consultation is confirmed — ' .
+            Carbon::parse($this->booking['preferred_date'])->format('d F Y'),
         );
     }
 
@@ -28,6 +30,21 @@ class ConsultationConfirmation extends Mailable
     {
         return new Content(
             view: 'emails.consultation-confirmation',
+            with: [
+                'booking' => $this->booking,
+                'contactInfo' => $this->contactInfo,
+            ]
         );
+    }
+
+
+    public function build(): static
+    {
+        return $this->view('emails.consultation-confirmation')
+            ->with([
+                'booking' => $this->booking,
+                'contactInfo' => $this->contactInfo,
+            ])
+            ->subject('Your consultation is confirmed');
     }
 }

@@ -18,10 +18,9 @@
 
                 </div>
 
-                <a href="/alex" class="btn btn-outline-dark" style="margin-left:10px;">
-                    if you wish  Meet my collaborator Alex
+                <a href="/alex" class="btn btn-secondary" style="margin-left: 10px; border-color: #f7931e; color: #f7931e;">
+                    Meet My Collaborator Alex
                 </a>
-
                 <div class="hero-stats">
                     <div class="stat-box">
                         <strong>Laravel</strong>
@@ -161,17 +160,13 @@
             <div class="section-heading light">
                 <span class="section-label">Contact</span>
                 <h2>Let’s work together</h2>
-                <p>If your company needs a clean and professional website, I am ready to help.</p>
+                <p>we develop high‑quality, professional websites tailored to your company’s needs.</p>
             </div>
 
             <div class="contact-box">
                 <p><i class="fa-solid fa-envelope"></i> Email: tamara.dev.contact@gmail.com</p>
-                <p><i class="fa-solid fa-phone"></i> Phone: +389 7X XXX XXX</p>
                 <p><i class="fa-brands fa-github"></i> GitHub:
                     <a href="https://github.com/Tamycvetanka" target="_blank">github.com/Tamycvetanka</a>
-                </p>
-                <p><i class="fa-brands fa-facebook"></i> Facebook:
-                    <a href="https://facebook.com" target="_blank">Your public business page</a>
                 </p>
                 <p><i class="fa-brands fa-instagram"></i> Instagram:
                     <a href="https://instagram.com" target="_blank">Your brand profile</a>

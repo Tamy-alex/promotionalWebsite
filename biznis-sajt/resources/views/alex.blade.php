@@ -40,7 +40,7 @@
             <div class="hero-card">
                 <div class="hero-logo-box">
                     <div class="hero-logo-circle">AC</div>
-                    <h3>Phoenix Web Crafts</h3>
+                    <h3>ACT Web Develpment</h3>
                     <p>Backend Developer • Web & Security</p>
                 </div>
             </div>
@@ -174,12 +174,6 @@
                             <div class="repo-image-wrapper">
                                 <img src="{{ asset($repo['image']) }}" alt="{{ $repo['name'] }} screenshot">
                             </div>
-                        @else
-
-                            <div style="border: 2px dashed #ddd; border-radius: 8px; padding: 24px 12px; text-align:center; margin: 14px 0 10px; background:#fafafa;">
-                                <i class="fa-solid fa-image" style="font-size:1.6rem; color:#ccc;"></i>
-                                <p style="color:#bbb; font-size:0.8rem; margin: 6px 0 0;">Screenshot placeholder<br><small>Replace with <code>&lt;img src="..."&gt;</code></small></p>
-                            </div>
                         @endif
 
                         <a href="{{ $repo['url'] }}" class="btn btn-primary" target="_blank" style="display:inline-flex; align-items:center; gap:8px; margin-top:6px;">
@@ -202,15 +196,14 @@
         <div class="container">
             <div class="section-heading light">
                 <span class="section-label">Contact</span>
-                <h2>Let's build something great</h2>
-                <p>Open to collaboration, freelance work and new opportunities.</p>
+                <h2>Building reliable digital solutions</h2>
+                <p> we are Open to freelance projects, technical collaborations, and company roles.</p>
             </div>
 
             <div class="contact-box">
                 <p><i class="fa-solid fa-envelope"></i> Email:
                     <a href="mailto:cvetica8@gmail.com">cvetica8@gmail.com</a>
                 </p>
-                <p><i class="fa-solid fa-phone"></i> Phone: +39 393 066 3796</p>
                 <p><i class="fa-brands fa-github"></i> GitHub:
                     <a href="https://github.com/anxietyPotato" target="_blank">github.com/anxietyPotato</a>
                 </p>
@@ -222,24 +215,50 @@
     </section>
 
 
-    <div id="imageOverlay" style="display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; background:rgba(0,0,0,0.8); z-index:9999; justify-content:center; align-items:center;">
-        <img id="overlayImg" src="" style="max-width:60vw; max-height:60vh; border-radius:12px;">
+    <div id="imageOverlay" class="image-overlay">
+
+        <button id="closeOverlay" class="overlay-close">&times;</button>
+
+        <img id="overlayImg" class="overlay-image">
+    </div>
+
+    <div id="imageOverlay" class="image-overlay">
+        <button id="closeOverlay" class="overlay-close">&times;</button>
+        <img id="overlayImg" class="overlay-image">
     </div>
 
     <script>
         const overlay = document.getElementById('imageOverlay');
         const overlayImg = document.getElementById('overlayImg');
+        const closeBtn = document.getElementById('closeOverlay');
 
+        // OPEN on hover (fixed behavior)
         document.querySelectorAll('.repo-image-wrapper img').forEach(img => {
-            img.addEventListener('mouseenter', function () {
-                overlayImg.src = this.src;
+            img.addEventListener('mouseenter', () => {
+                overlayImg.src = img.src;
                 overlay.style.display = 'flex';
+                document.body.style.overflow = 'hidden';
             });
         });
 
-        overlay.addEventListener('mouseleave', function () {
+        // CLOSE function
+        function closeOverlay() {
             overlay.style.display = 'none';
             overlayImg.src = '';
+            document.body.style.overflow = '';
+        }
+
+        // X button
+        closeBtn.addEventListener('click', closeOverlay);
+
+        // click outside image
+        overlay.addEventListener('click', (e) => {
+            if (e.target === overlay) closeOverlay();
+        });
+
+        // ESC key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') closeOverlay();
         });
     </script>
 
